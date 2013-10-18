@@ -1,73 +1,5 @@
 03.08.12 Release Total Commander 8.01 final (32/64)
-03.08.12 Fixed: The entry "Network (workgroup)" was shown with user color for encrypted files (32/64)
-02.08.12 Fixed: Inplace rename button wasn't removed after entering inaccessible network path in current path field (32/64)
-31.07.12 Fixed: Click on button in second row of button bar which opens bar as submenu multiple times -> pressed state sometimes not removed (32/64)
-31.07.12 Fixed: Workaround to faulty CAB unpack dll on Linux with Wine passing unaligned FDINOTIFICATION structure to callback (64)
-31.07.12 Fixed: Lister: Could not search for English text in file encoded with ISO-2022-JP (50220). Displayed position, copy to clip are unfortunately wrong (32/64)
-31.07.12 Fixed: Copying a folder with Shift+F5 didn't remove trailing spaces entered by the user (32/64)
-
-27.07.12 Release Total Commander 8.01 release candidate 5 (32/64)
-27.07.12 Fixed: New 64-bit install.exe which also works on Linux with Wine, also with faulty CAB unpack dll (64)
-27.07.12 Added: Multi-rename tool: New placeholder [A] inserts complete file name with extension, but without the path (32/64)
-27.07.12 Fixed: TC8 not starting on Windows NT4 with AMD Sempron - problem with turning off SSE exceptions (use try..except to catch) (32)
-25.07.12 Fixed: Pack (ZIP,TAR,Plugin) from Search - Feed to listbox to packer plugin -> include the same file only once, e.g. if the user selects c:\test1\ and c:\test1\test2\ with files in the latter (32/64)
-25.07.12 Fixed: Internal associations: When multiple files of different types are selected, handle default "open" verb like in older versions: Each file will be opened with its own program (first matching filter for that program), and not the first matching all files as for additional verbs (32/64)
-24.07.12 Fixed: Make it faster to use the following internal content plugin fields: tc.fullname, tc.name, tc.extension and tc.path (by not calling FindFirstFile again) (32/64)
-24.07.12 Fixed: Tab context menu didn't react to right mouse button click on a menu item (32/64)
-24.07.12 Fixed: Upload to FTP server: MFMT was sending wrong timestamp when using the new (Windows 7) time conversion from/to UTC (32/64)
-24.07.12 Fixed: Rare crash in compare by content on Backspace or Undo operation (in wstrlcopy function) (32/64)
-24.07.12 Fixed: Directory history and hotlist buttons were shown in the wrong location when starting TC with no button bar, non-flat interface, and no tabs (32/64)
-19.07.12 Fixed: Disable target panel while adding files to background transfer manager, so the user cannot set the focus to it, e.g. by changing tabs on the target side (32/64)
-19.07.12 Fixed: Do not show "Network (WORKGROUP)" in breadcrumb bar (32/64)
-
-13.07.12 Release Total Commander 8.01 release candidate 4 (32/64)
-13.07.12 Fixed: Alt+Shift+F11 cm_FocusButtonbar and cursor keys within button bar: Handle special case where the first and/or last button is a separator (32/64)
-13.07.12 Fixed: Changed tcmdx64.exe so it can also be used with TC 8.00 in search results context menu without causing a crash (32)
-11.07.12 Fixed: When opening a subdirectory, set caret to first item before adding the new items to the list to avoid a duplicate cursor on Linux/Wine (64)
-11.07.12 Added: Internal associations: When context menu is opened while multiple file types are selected, check more filters if the first doesn't match all files, e.g. *.c doesn't match, but *.c *.h further down matches all selected files (32/64)
-11.07.12 Fixed: Removed: Default beep on ENTER in inplace rename box  (64)
-10.07.12 Fixed: Edit current path: Avoid that the in place edit box gets invoked twice (32/64)
-10.07.12 Fixed: New delete function: Also hide "Pause" button so the user doesn't pause the operation with Del+Enter (32/64)
-10.07.12 Fixed: Also adjust the width of the text field in FTP delete confirmation dialog for very long names with no spaces (32/64)
-08.07.12 Added: Experimental: wincmd.ini [Configuration] NetHoodReadInfo=8: Windows Vista/7: Use new delayed method to read virtual network folders, to make it faster (all except for the network neighborhood) (32/64)
-
-06.07.12 Release Total Commander 8.01 release candidate 3 (32/64)
-06.07.12 Fixed: Edit comment with Ctrl+Z: Comment was not shown in comment view (Ctrl+Shift+F2) (64)
-05.07.12 Fixed: Command line: Command del *.bak did nothing when in a path without spaces but with '&' in a folder name (32/64)
-05.07.12 Fixed: OK/CRC ERROR prefix was sometimes missing in CRC check dialog (64)
-05.07.12 Fixed: Cursor in right panel, quick view in left, move panel separator -> cursor switched to left panel (32/64)
-04.07.12 Fixed: Change current path: Put rename confirmation button outside of the current path field to avoid drawing errors (32/64)
-04.07.12 Fixed: Remove inplace rename box when the user moves the divider between the two panels, just like when resizing the main window (32/64)
-03.07.12 Fixed: Synchronize dirs: Work with FTP servers returning relative instead of absolute path like SwiFTP, e.g. "mnt/sdcard" instead of "/mnt/sdcard" (32/64)
-03.07.12 Fixed: Problems with cursor left/right in inplace rename edit (64)
-03.07.12 Fixed: Ctrl+Q on file in thumbnails view would scroll the file out of view if number of thumbnail columns changed (32/64)
-03.07.12 Fixed: Internal command cm_editpath was causing an access violation with rename confirmation button enabled (32/64)
-03.07.12 Fixed: Text field in FTP delete confirmation dialog wasn't adjusted to fit longer file names (32/64)
-
-29.06.12 Release Total Commander 8.01 release candidate 2 (32/64)
-29.06.12 Fixed: Synchronize with FTP: Couldn't always abort the reading of the remote directories (64)
-29.06.12 Fixed: Alternate NTFS data streams were not copied when using the old default or large file copy method (64)
-28.06.12 Fixed: Menu bar not drawn correctly themed when taking 2 or more lines (64)
-28.06.12 Fixed: Speed up CRC check function: improved parsing of checksum file, update result list only every 100 ms (32/64)
-28.06.12 Fixed: Standalone synchronize dirs not working (crashing) with FTP (connection stored in normal sync, then launched with /S=S:stored_config) (32/64)
-28.06.12 Fixed: Ignore double click in Configuration - Options - Custom columns when the list is empty (64)
-27.06.12 Fixed: Single click not working after double clicking in the listbox in Configuration - Options - Custom columns and closing it with ESC (64)
-27.06.12 Fixed: Up/Down arrow key in inplace rename field would close the rename field by mistake (64)
-27.06.12 Fixed: Abort current copy operation in background transfer manager with "-" button -> next operation in list was aborted too (32/64)
-27.06.12 Fixed: Footer with total file count sometimes not updated after selecting with Shift+Home or Shift+End (64)
-27.06.12 Fixed: Quick search backwards in compare by contents: There wasn't always a beep when nothing was found (32/64)
-27.06.12 Fixed: Couldn't find text in Unicode big endian files with Alt+F7, except when using "case sensitive" search (32/64)
-27.06.12 Fixed: Drive panel width too small with two drive panels and two panels above each other (64)
-27.06.12 Added: Show inplace rename confirmation button also in current dir bar (32/64)
-27.06.12 Fixed: Rename path in separate tree, turn off separate tree -> access violation (32)
-26.06.12 Fixed: Multi-rename tool: Controls were not sized correctly on initial start (32)
-26.06.12 Fixed: Use unrar dll 3.80 as unrar9x.dll because the newer one only worked on Windows 98/ME (32)
-26.06.12 Fixed: Crash on Windows 9x when trying to open the command line history, caused by auto-complete (32)
-26.06.12 Fixed: Auto-install plugins: Find old plugin location also when installing 64bit or combined plugin while only 32-bit plugin is installed (64)
-
-22.06.12 Release Total Commander 8.01 release candidate 1 (32/64)
-22.06.12 Fixed: Tab tooltips (hints) not shown in right panel with Ctrl+Tab (64)
-20.06.12 Fixed: Themes off maximize, minimize, insert flash drive, restore -> drive buttonbar may be drawn without background (program behind shining through) (64)
+buttonbar may be drawn without background (program behind shining through) (64)
 17.06.12 Fixed: Find files: Click on title bar close button during search closed window at the end of the search. Instead, just abort the search (32/64)
 15.06.12 Fixed: When closing inplace rename with ENTER, the rename function was called twice by mistake in plugins (64)
 15.06.12 Fixed: Delete to recycle bin wasn't logged (32/64)
@@ -1014,7 +946,7 @@
 05.11.10 Added: Windows 7: Show pause button in "aero peek" windows (shown when hovering over taskbar icon) during file operations to pause them
 04.11.10 Added: Compare by Content: Auto-detect UTF-8-encoded css files starting with text: @charset "utf-8"
 04.11.10 Added: Compare by Content: Auto-detect UTF-8-encoded xml files by tag <?xml version="1.0" encoding="UTF-8" ...
-04.11.10 Added: Compare by Content: Auto-detect UTF-8-encoded html files by tag <meta http-equiv="Content-type" charset=UTF-8" ... (except when containing non-UTF8 chars like ß)
+04.11.10 Added: Compare by Content: Auto-detect UTF-8-encoded html files by tag <meta http-equiv="Content-type" charset=UTF-8" ... (except when containing non-UTF8 chars like ï¿½)
 04.11.10 Added: Lister, Compare by Content: Auto-detect UTF-8-encoded files by checking the presence of only valid multi-byte sequences (first byte determines length of sequence)
 04.11.10 Added: Button bar right click menu: Menu item "As Administrator" for running the program of that button with admin rights
 04.11.10 Added: HideRemovableNoMedia=2: Hide drives with no media in it in drive dropdown list (use 3 for both drive dropdown list and drive bar)
@@ -1361,7 +1293,7 @@
 17.03.10 Added: Explicitly load shield overlay icons on Vista and Windows 7 for programs requiring admin rights to run
 17.03.10 Fixed: GNU TAR could not correctly unpack some TAR files created by TC (last character of file name was cut if name was exactly 100 chars long, files only)
 17.03.10 Added: Search function: When started from "Feed to listbox" panel, handle as if all files would be selected
-16.03.10 Added: With the help from a German user, changed all German texts and the Help from Swiss to German spellings (ß character)
+16.03.10 Added: With the help from a German user, changed all German texts and the Help from Swiss to German spellings (ï¿½ character)
 16.03.10 Fixed: Set lower thread priority of tree update thread (for updating treeinfo.wc) to speed up foreground operations, temporarily speed up the thread in critical sections
 16.03.10 Fixed: Access violation when dragging selected text from Syn Lister plugin to Total Commander
 16.03.10 Fixed: Center CRC check window again over main window
@@ -2357,7 +2289,7 @@
 18.03.09 Release Total Commander 7.50 Beta 14
 18.03.09  Fixed: Allow to copy files as other user when read access is denied to just that file, and not its parent directory (only when using compatibility mode)
 18.03.09  Fixed: Drive panel not updated when changing from a directory to a drive created with SUBST pointing to that directory
-18.03.09  Fixed: ZIP packer: Detect duplicate file names when packing, and characters are lost in the conversion from ANSI to OEM (e.g. '»' -> '>' in Russian locale)
+18.03.09  Fixed: ZIP packer: Detect duplicate file names when packing, and characters are lost in the conversion from ANSI to OEM (e.g. 'ï¿½' -> '>' in Russian locale)
 18.03.09  Fixed: Compare by content, 2 panels above each other: The line count wasn't corrected when using "swap panels", only after resizing or moving the split bar
 17.03.09  Fixed: Button bar: Button to other .bar file not recognized if path was put in double quotes ""
 15.03.09  Fixed: Vista. command line: cd d: didn't work if user didn't have sufficient rights to access drive d: 
@@ -3113,7 +3045,7 @@
 24.09.08  Fixed: Unicode support in parallel port connection not working properly in all functions
 23.09.08  Added: Synchronize dirs: Allow user to copy just the time stamp, attributes, and NTFS permissions of files
 21.09.08  Added: Support for UTF-16 Unicode ini files when reading/writing Unicode names. TC re-checks whether an ini file is Unicode when copying files, when switching to TC from another program, and when closing down
-19.09.08  Fixed: dead keys like ¨ did not work with quick search (letters with search dialog), e.g. ¨a -> ä
+19.09.08  Fixed: dead keys like ï¿½ did not work with quick search (letters with search dialog), e.g. ï¿½a -> ï¿½
 19.09.08  Fixed: Drag&Drop within separate tree: Do not allow to collapse directory if the dragged item is part of it
 17.09.08  Added: Drag&Drop from separate tree to archive
 17.09.08  Added: Drag&Drop from separate tree to file list, drive button bar and tabs
