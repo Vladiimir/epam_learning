@@ -3,6 +3,7 @@ $(document).ready(function(){
     $('.bxslider-slider').bxSlider({
         auto: true
     });
+
     $('#carusel').carouFredSel({
         //responsive: true,
         width: '100%',
@@ -18,6 +19,19 @@ $(document).ready(function(){
         prev: '#prev2',
         next: '#next2'
     });
+
+    $(function() {
+        $("#carusel img")
+            .mouseover(function() {
+                var src = $(this).attr("src").match(/[^\.]+/) + "-hov.png";
+                $(this).attr("src", src);
+            })
+            .mouseout(function() {
+                var src = $(this).attr("src").replace("-hov.png", ".png");
+                $(this).attr("src", src);
+            });
+    });
+
     $('#calendar').datepicker({
         inline: true,
         beforeShowDay:  iventsDays
