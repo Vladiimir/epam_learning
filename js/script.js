@@ -6,7 +6,7 @@ $(document).ready(function(){
 
     $('#carusel').carouFredSel({
         //responsive: true,
-        width: '100%',
+        width: '90%',
         scroll: 2,
         items: {
             //width: auto,
@@ -38,16 +38,28 @@ $(document).ready(function(){
     });
 
     $('#calendar .ui-datepicker-today a').attr('title', 'test text');
-    $('#calendar').tooltip({
+    $('#calendar').find('.ui-datepicker-calendar').tooltip({
         track: false,
         delay: 0,
         showURL: false,
-        fade: 200
+        fade: 200,
+        position: {
+            my: "center+1 bottom+70",
+            at: "center top",
+            using: function (position, feedback) {
+                $(this).css(position);
+                $("<div>")
+                    .addClass("arrow")
+                    .addClass(feedback.vertical)
+                    .addClass(feedback.horizontal)
+                    .appendTo(this);
+            }
+        }
     });
 
 
     function iventsDays(date) {
-        var ivenDays = ["2","5"];
+        var ivenDays = ["21","15"];
         var sDate = date.getDate().toString();
         if (jQuery.inArray(sDate, ivenDays) !== -1) {return [false,"mark", "Some text"];}
         else  return [true, ""];
