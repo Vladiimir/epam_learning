@@ -157,6 +157,7 @@ a:hover{
     margin: 6px;
     display: block;
     float: left;
+    height: 130px;
 }
 .list_carousel.responsive {
     width: auto;
