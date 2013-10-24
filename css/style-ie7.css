@@ -1,0 +1,60 @@
+.site-logo{
+    float: left;
+}
+.site-title{
+    float: left;
+}
+.site-title a{
+    font-size: 22px;
+    font-family: Arial;
+}
+#site-search{
+    padding-top: 17px;
+}
+#main-nav{
+    overflow: inherit;
+    display: block;
+    background: url("../images/bg-nav.png") left center repeat-x transparent;
+    width: 100%;
+}
+#main-nav li{
+    display: block;
+    float: left;
+    width: 150px;
+    background: none;
+    padding: 13px 0;
+}
+.main-nav-wrapper{
+    text-align: center;
+    padding: 30px 0 0 0;
+    margin: 0;
+}
+#region-content-first{
+    float: left;
+}
+#region-content-second{
+    padding-left: 30px;
+}
+.block-news .date{
+    float: left;
+}
+.news-item{
+    float: left;
+}
+.more-link{
+    clear: left;
+}
+.more-link a{
+    top: inherit;
+    position: static;
+}
+#footer-nav ul li{
+    float: left;
+}
+.copy-r{
+    float: left;
+}
+.block-contacts{
+    float: left;
+    width: 185px;
+}

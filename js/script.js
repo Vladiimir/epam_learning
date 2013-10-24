@@ -7,13 +7,13 @@ $(document).ready(function(){
     $('#carusel').carouFredSel({
         //responsive: true,
         width: '90%',
-        scroll: 2,
+        scroll: 1,
         items: {
             //width: auto,
             //height: '150px',	//	optionally resize item-height
             visible: {
                 min: 2,
-                max: 6
+                max: 5
             }
         },
         prev: '#prev2',
