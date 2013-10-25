@@ -44,7 +44,7 @@ img{
     background: linear-gradient(to right,  rgba(0,0,0,1) 0%,rgba(0,0,0,0.29) 9%,rgba(0,0,0,0) 21%,rgba(0,0,0,0) 79%,rgba(0,0,0,0.29) 91%,rgba(0,0,0,1) 100%); /* W3C */
     /*filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#000000',GradientType=1 ); /* IE6-8 */
 }
-#page{
+.page{
     width: 950px;
     margin: 0 auto;
 }
@@ -75,13 +75,13 @@ img{
     border-radius: 3px 3px 6px 6px;
 }
 .region-content-first{
-    width: 360px;
+    width: 37.5%;
     display: inline-block;
     vertical-align: top;
 }
 .region-content-second{
-    width: 555px;
-    margin-left: 30px;
+    width: 58.3%;
+    margin-left: 3.2%;
     display: inline-block;
     vertical-align: top;
 }
@@ -97,6 +97,10 @@ img{
 /*-----------------site-logo-----------------------*/
 .site-logo{
     display: inline-block;
+    width: 29.4%;
+}
+.site-logo img{
+    width: 100%;
 }
 /*-----------------end site-logo-----------------------*/
 
@@ -105,7 +109,7 @@ img{
     display: inline-block;
     font-family: corinthiaregular, Arial, sans-serif;
     vertical-align: top;
-    margin: 15px 0 0 80px;
+    margin: 15px 0 0 8.3%;
 }
 .site-title a{
     text-decoration: none;
@@ -168,6 +172,9 @@ img{
     display: block;
     color: #ffffff;
 }
+.main-nav-icon{
+     display: none;
+ }
 /*-----------------main navigation-----------------------*/
 
 /*----------carusel-------------*/
@@ -234,7 +241,7 @@ img{
     width: 100%;
     overflow: hidden;
     position: relative;
-    height: 322px;
+    height: auto;
     background: none !important;
     border: none !important;
     box-shadow: none !important;
@@ -260,6 +267,7 @@ img{
 .bx-wrapper{
     margin: 0;
 }
+.bx-wrapper .bx-prev:hover,
 .bx-wrapper .bx-prev{
     background: url("../images/sprite.png") -7px -40px no-repeat transparent;
     width: 35px !important;
@@ -322,7 +330,7 @@ img{
 }
 .ui-datepicker-calendar{
     clear: both;
-    margin: 0 15px;
+    width: 100%;
 }
 .ui-datepicker-calendar thead{
     display: none;
@@ -335,7 +343,7 @@ img{
     font-size: 21px;
     text-decoration: none;
     display: block;
-    padding: 10px 10px;
+    padding: 23%;
 }
 .ui-datepicker-unselectable{
 
@@ -343,7 +351,7 @@ img{
 .ui-datepicker-unselectable span{
     font-size: 21px;
     display: block;
-    padding: 10px 10px;
+    padding: 23%;
     background: url("../images/sprite.png") -58px -124px no-repeat transparent;
 }
 .ui-datepicker-unselectable span:hover{
@@ -400,17 +408,19 @@ img{
     margin: 0;
 }
 .block-news .date{
-     font-size: 12px;
+    font-size: 12px;
     text-align: center;
     display: inline-block;
     padding: 0 6px;
+    width: 16%;
+    vertical-align: top;
 }
 .block-news .date p{
     font-size: 32px;
 }
 .news-item > p{
     display: inline-block;
-    width: 80%;
+    width: 75%;
 }
 .more-link a,
 .news-item > p a{
@@ -437,7 +447,8 @@ img{
 /*-----------------block-banners-----------------------*/
 .block-banners a{
     display: inline-block;
-    margin: 0 22px;
+    margin: 0 2.4%;
+    width: 31.1%;
 }
 .block-banners a.first-item{
     margin: 0;
@@ -447,6 +458,7 @@ img{
 }
 .block-banners img{
     border-radius: 4px;
+    width: 100%;
 }
 /*-----------------end block-banners-----------------------*/
 
@@ -455,6 +467,7 @@ img{
     display: inline-block;
     font-size: 15px;
     color: #633854;
+    width: 25%;
 }
 /*-----------------end copy-r------------------------------*/
 
@@ -462,6 +475,8 @@ img{
 .footer-nav{
     display: inline-block;
     float: right;
+    width: 70%;
+    text-align: right;
 }
 .footer-nav ul{
     margin: 0;
@@ -470,7 +485,7 @@ img{
 .footer-nav ul li{
     list-style: none;
     display: inline-block;
-    padding: 0 20px;
+    padding: 0 3%;
 }
 .footer-nav ul li a{
     font-size: 14px;
@@ -480,7 +495,8 @@ img{
 /*-----------------footer site-logo------------------------------*/
 .region-footer-second .site-logo{
     display: inline-block;
-    margin-right: 115px;
+    margin-right: 12%;
+    width: 15%;
 }
 .region-footer-second .site-logo img{
     width: 142px;
@@ -492,7 +508,7 @@ img{
     display: inline-block;
     margin: 0px;
     vertical-align: top;
-    padding-left: 45px;
+    padding-left: 4.8%;
 }
 .block-contacts h6{
     margin: 0;
