@@ -12,7 +12,7 @@ $(document).ready(function(){
             //width: auto,
             //height: '150px',	//	optionally resize item-height
             visible: {
-                min: 2,
+                min: 1,
                 max: 5
             }
         },
@@ -65,4 +65,17 @@ $(document).ready(function(){
         else  return [true, ""];
 
     }
+
+//----------------mobile navigation----------------------------
+    $( "#main-nav-icon" ).click(function() {
+        $( "#main-nav" ).toggle(400);
+    });
+    $( window ).resize(function() {
+        if($(this).width() > 480){
+            $( "#main-nav" ).css('display', 'table-row');
+        }
+        else $( "#main-nav" ).css('display', 'none');
+    });
+//----------------end mobile navigation----------------------------
+
 });
